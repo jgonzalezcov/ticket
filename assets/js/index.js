@@ -15,10 +15,10 @@ button_calc.addEventListener('click', () => {
     Number(document.querySelector('.input_amount_2').value) +
     Number(document.querySelector('.input_amount_3').value)
   if (sum_ticket == 0) {
-    info.innerHTML = 'No has seleccionado ningun ticket'
+    info.innerHTML = 'No has seleccionado ningún ticket'
   } else if (10 < sum_ticket) {
     info.innerHTML = 'Llevas demasiados stickers'
   } else {
-    info.innerHTML = 'LLevas ' + sum_ticket + ' Tickets'
+    info.innerHTML = 'Llevas ' + sum_ticket + ' Tickets'
   }
 })
