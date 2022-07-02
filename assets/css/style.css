@@ -53,7 +53,7 @@ amount amount_3 {
   margin-top: 20px;
 }
 .select_num_container {
-  margin-top: 5px;
+  margin-top: 40px;
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -84,7 +84,7 @@ amount amount_3 {
   color: #fff;
   grid-area: title_password;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 5px;
   font-size: large;
 }
 
@@ -101,9 +101,9 @@ main {
     'amount_1 amount_2 amount_2'
     'info info info'
     'button_calc button_calc button_calc'
-    'title_password title_password title_password'
     'select_n select_n select_n'
-    'btn_passw btn_passw btn_passw';
+    'btn_passw btn_passw btn_passw'
+    'title_password title_password title_password';
 }
 
 .grid-container {
