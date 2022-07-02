@@ -52,6 +52,41 @@ amount amount_3 {
   height: 40px;
   margin-top: 20px;
 }
+.select_num_container {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  grid-area: select_n;
+  font-size: large;
+}
+.button_password_container {
+  grid-area: btn_passw;
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button_password {
+  background-color: #15b93b;
+  height: 40px;
+  cursor: pointer;
+  width: 33%;
+  border-radius: 10px;
+  font-size: large;
+  color: #fff;
+}
+.in {
+  width: 10%;
+  cursor: pointer;
+}
+.title_password {
+  color: #fff;
+  grid-area: title_password;
+  text-align: center;
+  margin-top: 40px;
+  font-size: large;
+}
 
 main {
   grid-area: main;
@@ -60,12 +95,15 @@ main {
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto auto auto;
   grid-template-areas:
     'container_ticket container_ticket container_ticket'
     'amount_1 amount_2 amount_2'
     'info info info'
-    'button_calc button_calc button_calc';
+    'button_calc button_calc button_calc'
+    'title_password title_password title_password'
+    'select_n select_n select_n'
+    'btn_passw btn_passw btn_passw';
 }
 
 .grid-container {
