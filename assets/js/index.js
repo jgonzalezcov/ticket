@@ -1,5 +1,6 @@
 /********************************************************************************************************
- * Desafío Parte I: Agregar y quitar borde a imagen haciendo clic en ella.                              *
+ * Desafío Parte I: Agregar y quitar borde a imagen haciendo clic en ella. La imagen es en la que se    *
+ * encuentran los logos de las bandas (class=main_image).                                               *
  ********************************************************************************************************/
 var main_button = document.querySelector('.main_button')
 main_button.addEventListener('click', () => {
