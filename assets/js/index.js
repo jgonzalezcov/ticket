@@ -5,9 +5,9 @@
 const main_button = document.querySelector('.main_button')
 main_button.addEventListener('click', () => {
   if (main_button.style.borderStyle != 'solid') {
-    main_button.style.border = '2px solid red'
+    main_button.setAttribute('style', 'border:2px solid red')
   } else {
-    main_button.style.borderStyle = 'none'
+    main_button.style.removeProperty('border')
   }
 })
 /********************************************************************************************************
@@ -17,16 +17,34 @@ let info = document.querySelector('.info')
 button_calc = document
   .querySelector('.button_calc')
   .addEventListener('click', () => {
+    let input_amount_1 = document.querySelector('.input_amount_1')
+    let input_amount_2 = document.querySelector('.input_amount_2')
+    let input_amount_3 = document.querySelector('.input_amount_3')
+    if (
+      isNaN(input_amount_1.value) ||
+      isNaN(input_amount_2.value) ||
+      isNaN(input_amount_3.value)
+    ) {
+      alert('Ups..... Solo puedes ingresar número.')
+      info.innerHTML = 'Intenta nuevamente pero solo con números'
+      input_amount_1.value = ''
+      input_amount_1.placeholder = 'Numeros del 0 al 10'
+      input_amount_2.value = ''
+      input_amount_2.placeholder = 'Numeros del 0 al 10'
+      input_amount_3.value = ''
+      input_amount_3.placeholder = 'Numeros del 0 al 10'
+      return
+    }
     let sum_ticket =
-      Number(document.querySelector('.input_amount_1').value) +
-      Number(document.querySelector('.input_amount_2').value) +
-      Number(document.querySelector('.input_amount_3').value)
+      Number(input_amount_1.value) +
+      Number(input_amount_2.value) +
+      Number(input_amount_3.value)
     if (sum_ticket === 0) {
       info.innerHTML = 'No has seleccionado ningún ticket'
     } else if (sum_ticket > 10) {
       info.innerHTML = 'Llevas demasiados stickers'
     } else {
-      info.innerHTML = `Llevas ${sum_ticket} ${' '} Tickets`
+      info.innerHTML = `Llevas ${sum_ticket} Tickets`
     }
   })
 /********************************************************************************************************
